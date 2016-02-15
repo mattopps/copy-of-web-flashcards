@@ -1,0 +1,9 @@
+<% if session[:user_id] != nil %>
+  <form method="post" action="/logout">
+    <input type="hidden" name="_method"  placeholder= "delete">
+    <input type= "submit" value= "Logout">
+  </form>
+<% else %>
+  <a href="/users/new">sign up</a>
+  <a href="/login">login</a>
+<% end %>

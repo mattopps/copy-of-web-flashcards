@@ -1,0 +1,7 @@
+<h1>Play one of these decks.</h1>
+
+<ul>
+  <% @decks.each do |deck| %>
+    <li><a href="/decks/<%=deck.id%>"><%= deck.name %></a></li>
+  <% end %>
+</ul>

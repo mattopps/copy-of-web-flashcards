@@ -1,0 +1,23 @@
+<!--
+
+ essentiall this is what we're doing:
+
+ def controller(answer, card_id_num){
+  answer db logic
+  card_id_num += 1
+  show_card(card[card_id_num])
+ }
+
+ def show_card(card_id_num) {
+  puts card[card_id_num].question
+  gets answer
+  controller(answer, card_id_num)
+ }
+ -->
+
+  <form action="CARD_PAGE" method="POST">
+    <input type="hidden" name="_method" value='PUT'>
+    <input type="hidden" name="card_id" value=CURRENT_CARD_ID_NUM>
+    <input type="text" name="answer" placeholder="Answer"
+    <input type="submit" value="Submit">
+  </form>
