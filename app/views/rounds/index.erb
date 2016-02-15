@@ -1,0 +1,13 @@
+<% if @correct %>
+
+  <p><%=@correct%></p>
+
+<% end %>
+
+<%= @card.question %>
+<form action="/guess" method="POST">
+    <input type="hidden" name="round_id" value="<%=@round_id%>">
+    <input type="hidden" name="card_id" value="<%=@card.id%>">
+    <input type="text" name="answer" placeholder="Answer">
+    <input type="submit" value="Submit">
+</form>

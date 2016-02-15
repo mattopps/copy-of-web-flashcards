@@ -1,0 +1,15 @@
+<% erb :'_errors' %>
+
+<form method="POST" action="/users">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="text" name="user_name" placeholder="<%= @users.user_name %>">
+    <input type="password" name="password" placeholder="<%= @users.password  %>">
+    <input type="text" name="first_name" placeholder="<%= @users.first_name %>">
+    <input type="text" name="last_name" placeholder="<%= @users.last_name %>">
+    <input type="submit" value="Update Account" class="button">
+</form>
+
+<form method="POST" action="/users/<%=@user.id%>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete This User" class="button">
+</form>

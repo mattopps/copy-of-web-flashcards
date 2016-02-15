@@ -1,0 +1,17 @@
+<h3><%= @user.user_name %></h3><br>
+
+<% @user.rounds.each do |round| %>
+  <h3><%= round.deck.name %></h3>
+    <table border="1">
+        <tr>
+          <th>Total Cards</th>
+          <th>Correct on First Guess</th>
+          <th>Total Guesses</th>
+        </tr>
+        <tr>
+          <td><%= round.deck.cards.size%></td>
+          <td> -- </td>
+          <td><%= round.guesses.count%></td>
+        </tr>
+    </table>
+<% end %>
